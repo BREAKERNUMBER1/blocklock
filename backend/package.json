@@ -1,0 +1,23 @@
+{
+  "name": "blocklock-backend",
+  "version": "1.0.0",
+  "description": "BlockLock backend API — signature verification, NFT checks, MQTT unlock signaling",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "ethers": "^6.11.0",
+    "express": "^4.18.0",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "mqtt": "^5.3.0",
+    "uuid": "^9.0.0"
+  }
+}

@@ -69,7 +69,6 @@ Most "NFT-gated" demos stop at checking a wallet's holdings in a UI. This projec
 - **MQTT replay window is not yet enforced.** The unlock payload carries a `timestamp` and `MAX_COMMAND_AGE_SECONDS` is defined in `config.h`, but the firmware doesn't currently check command age, and the nonce-dedup ring in `blocklock_main.ino` is declared but not wired up. A captured HMAC-signed message could be replayed to unlock the door without a new token payment. **Priority fix** — tracked as the top item before this goes anywhere beyond a testnet demo.
 - **TLS certificate verification is off by default** (`wifiClient.setInsecure()`) for easier dev bring-up. `docs/deployment.md` documents swapping in CA-cert pinning for production; it isn't the default.
 - **Rate limits are tuned for testing** (50 unlock attempts/min per wallet) — tighten before any real-world deployment.
-- **No LICENSE file yet** in the repo root (contracts carry an MIT SPDX header individually).
 
 ## Stack
 
